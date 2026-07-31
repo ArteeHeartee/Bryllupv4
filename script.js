@@ -1979,14 +1979,14 @@ const handleDesktopWheel = (event) => {
         desktopWheelAccumulator = 0;
 
       },
-      70
+      90
     );
 
 
   if (
     Math.abs(
       desktopWheelAccumulator
-    ) < 24
+    ) < 32
   ) {
     return;
   }
@@ -2036,7 +2036,7 @@ const handleDesktopWheel = (event) => {
       desktopWheelLocked = false;
 
     },
-    160
+    280
   );
 
 };
