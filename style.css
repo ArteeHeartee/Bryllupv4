@@ -6880,320 +6880,240 @@ body.invitation-open .wax-seal {
     transform:
       translateY(-12px);
   }
-/* ==================================================
-   V5 – SYNLIG VISUELL REDESIGN
-   Romantisk europeisk herskapshus
-================================================== */
+
+/* =====================================================================
+   ULTIMATE VISUELL OPPGRADERING — 31.07.2026
+   Synlig blush / sage / mauve-identitet for hele bryllupsinvitasjonen.
+===================================================================== */
 
 :root {
-  --mauve-deep: #6a3f50;
-  --mauve: #8a5366;
-  --mauve-soft: #cdaeba;
-  --sage-deep: #74795b;
-  --sage: #a6aa83;
-  --sage-pale: #e9eadf;
-  --ivory: #fcf8f5;
-  --blush-wash: #e3c8d1;
+  --ultimate-ivory: #f8f3ef;
+  --ultimate-blush: #efdde2;
+  --ultimate-blush-deep: #d7b5bf;
+  --ultimate-sage: #a6aa83;
+  --ultimate-sage-deep: #747a59;
+  --ultimate-mauve: #8a5366;
+  --ultimate-mauve-deep: #563545;
+  --ultimate-ink: #403531;
 }
 
-body,
-.screen-section,
-.invitation-section {
-  transition: background-color 320ms ease, color 320ms ease;
+.site-header {
+  background: rgba(248, 243, 239, .94) !important;
+  border-bottom-color: rgba(116, 122, 89, .24) !important;
+  box-shadow: 0 8px 30px rgba(65, 54, 50, .055);
 }
 
-/* Header: tydeligere og mer eksklusiv navigasjon */
+.header-quick-navigation { gap: clamp(8px, 1.6vw, 22px) !important; }
 .header-quick-navigation a {
-  width: clamp(40px, 3.45vw, 49px);
-  height: clamp(40px, 3.45vw, 49px);
+  width: clamp(39px, 3.4vw, 48px) !important;
+  height: clamp(39px, 3.4vw, 48px) !important;
+  color: var(--ultimate-sage-deep) !important;
+  transition: color .22s ease, background .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease !important;
 }
-
-.header-quick-navigation svg {
-  width: clamp(19px, 1.7vw, 23px);
-  height: clamp(19px, 1.7vw, 23px);
-}
-
+.header-quick-navigation svg { width: 20px !important; height: 20px !important; }
 .header-quick-navigation a:hover,
 .header-quick-navigation a:focus-visible {
-  background: rgba(227, 200, 209, .42);
-  border-color: rgba(166, 170, 131, .58);
-  box-shadow: 0 8px 24px rgba(106, 63, 80, .12);
+  color: var(--ultimate-mauve) !important;
+  background: rgba(239, 221, 226, .58) !important;
+  border-color: rgba(116, 122, 89, .38) !important;
+  box-shadow: 0 8px 20px rgba(86, 53, 69, .10);
+  transform: translateY(-2px) scale(1.04) !important;
 }
-
 .header-quick-navigation a.active {
+  color: #fffaf7 !important;
+  background: var(--ultimate-mauve) !important;
+  border-color: var(--ultimate-mauve) !important;
+  box-shadow: 0 8px 22px rgba(86, 53, 69, .23);
   transform: scale(1.08);
-  box-shadow: 0 9px 24px rgba(106, 63, 80, .2);
 }
 
-/* Forside: større, låst Harmonien-illustrasjon */
-@media (min-width: 761px) {
-  body.desktop-page-mode .inside-center {
-    justify-content: center;
-    padding-top: clamp(16px, 2.5vh, 30px);
-  }
-
-  body.desktop-page-mode .harmonien-illustration {
-    width: clamp(430px, 31vw, 650px) !important;
-    height: clamp(235px, 30vh, 365px) !important;
-    max-width: min(92%, 650px) !important;
-    max-height: 36vh !important;
-    margin: clamp(-36px, -3vh, -14px) auto clamp(25px, 3vh, 42px) !important;
-    object-fit: contain !important;
-    transform: none !important;
-  }
-
-  body.desktop-page-mode .inside-center h1 {
-    margin-top: 0;
-  }
+/* Sideidentitet og myke bakgrunnsoverganger */
+.screen-section,
+.invitation-section,
+.rsvp-footer-card {
+  transition: background-color .38s ease, color .38s ease, opacity .30s ease, transform .30s var(--ease) !important;
 }
-
-@media (min-width: 761px) and (max-height: 760px) {
-  body.desktop-page-mode .harmonien-illustration {
-    width: clamp(360px, 27vw, 520px) !important;
-    height: clamp(185px, 25vh, 250px) !important;
-    max-height: 28vh !important;
-    margin-top: -10px !important;
-    margin-bottom: 18px !important;
-  }
-}
-
-/* Historien: kortfølelse, luft og hover */
-@media (min-width: 761px) {
-  body.desktop-page-mode .timeline-event {
-    border-radius: 2px;
-    transition: transform 260ms var(--ease), box-shadow 260ms ease, background-color 260ms ease;
-  }
-
-  body.desktop-page-mode .timeline-event:hover {
-    transform: translateY(-4px);
-    background: rgba(252, 248, 245, .96);
-    box-shadow: 0 18px 42px rgba(65, 54, 50, .1);
-  }
-
-  body.desktop-page-mode .timeline-event > img {
-    transition: transform 360ms var(--ease), filter 300ms ease;
-    transform-origin: center;
-  }
-
-  body.desktop-page-mode .timeline-event:hover > img {
-    transform: scale(1.025);
-    filter: saturate(1.04) contrast(1.02);
-  }
-
-  body.desktop-page-mode .timeline-copy time {
-    display: block;
-    margin-bottom: 7px !important;
-  }
-
-  body.desktop-page-mode .timeline-copy h3 {
-    line-height: 1.08;
-  }
-}
-
-/* Program: blush-papir med subtil tekstur */
+.story-section { background: linear-gradient(145deg, #fffaf7 0%, #f8f1ed 100%) !important; }
 .program-section {
+  background-color: var(--ultimate-blush) !important;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(86,53,69,.018) 0, rgba(86,53,69,.018) 1px, transparent 1px, transparent 5px),
+    repeating-linear-gradient(90deg, rgba(116,122,89,.015) 0, rgba(116,122,89,.015) 1px, transparent 1px, transparent 6px),
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.42), transparent 28%),
+    radial-gradient(circle at 86% 82%, rgba(166,170,131,.18), transparent 30%) !important;
+}
+.practical-section { background: linear-gradient(145deg, #f8f3ef, #eef0e3) !important; }
+.gifts-section {
   background:
-    repeating-linear-gradient(0deg, rgba(106,63,80,.018) 0, rgba(106,63,80,.018) 1px, transparent 1px, transparent 5px),
-    repeating-linear-gradient(90deg, rgba(116,121,91,.014) 0, rgba(116,121,91,.014) 1px, transparent 1px, transparent 6px),
-    linear-gradient(135deg, #dfc3cc, #d4b2be 52%, #dfc7cf);
+    radial-gradient(circle at 12% 16%, rgba(255,255,255,.12), transparent 28%),
+    linear-gradient(145deg, #7d8262 0%, #62684b 100%) !important;
 }
 
-.program-section .program-card {
-  background: rgba(255,255,255,.08);
-  transition: background-color 260ms ease, transform 260ms var(--ease);
+/* Harmonien som hovedmotiv */
+@media (min-width: 761px) {
+  body.desktop-page-mode .inside-center { justify-content: flex-start !important; padding-top: clamp(18px, 2.4vh, 32px) !important; }
+  body.desktop-page-mode .harmonien-illustration {
+    width: clamp(470px, 39vw, 690px) !important;
+    height: clamp(235px, 34vh, 390px) !important;
+    max-width: min(96%, 690px) !important;
+    max-height: 38vh !important;
+    margin: -8px auto clamp(18px, 2.3vh, 30px) !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    filter: none !important;
+    mix-blend-mode: multiply;
+  }
+  body.desktop-page-mode .inside-center h1 { margin-top: -8px !important; }
+}
+@media (min-width: 761px) and (max-height: 790px) {
+  body.desktop-page-mode .harmonien-illustration {
+    width: clamp(390px, 34vw, 560px) !important;
+    height: clamp(185px, 27vh, 255px) !important;
+    max-height: 29vh !important;
+    margin-bottom: 10px !important;
+  }
 }
 
-.program-section .program-card:hover {
-  background: rgba(255,255,255,.18);
-  transform: translateY(-3px);
-}
+/* Nedtelling */
+.countdown { width: min(790px, 88%) !important; }
+.countdown-item span { font-size: clamp(1.9rem, 2.8vw, 3rem) !important; color: var(--ultimate-mauve-deep) !important; }
 
-/* Praktisk: synlige outline-ikoner */
-.information-card {
-  position: relative;
+/* Historien — mer luft, dybde og levende bilder */
+.timeline-image {
+  box-shadow: 0 10px 26px rgba(65,54,50,.09);
+  transition: transform .34s var(--ease), box-shadow .34s ease, filter .34s ease !important;
 }
+.timeline-event { transition: transform .34s var(--ease) !important; }
+@media (hover: hover) and (pointer: fine) {
+  .timeline-event:hover { transform: translateY(-4px); }
+  .timeline-event:hover .timeline-image {
+    transform: scale(1.025);
+    box-shadow: 0 18px 38px rgba(65,54,50,.16);
+    filter: saturate(1.04) contrast(1.015);
+  }
+}
+.timeline-copy time { display: block; margin-bottom: 8px !important; color: var(--ultimate-mauve) !important; }
+.timeline-copy h3 { line-height: 1.12 !important; }
+.timeline-symbol { border-color: rgba(116,122,89,.48) !important; color: var(--ultimate-mauve) !important; }
 
-.information-icon {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 22px;
+/* Program — myke kort med papirfølelse */
+.program-card {
+  background: rgba(255,250,247,.28) !important;
+  border-color: rgba(116,122,89,.28) !important;
+  transition: background .28s ease, transform .28s var(--ease), box-shadow .28s ease !important;
+}
+@media (hover:hover) and (pointer:fine) {
+  .program-card:hover { background: rgba(255,250,247,.58) !important; transform: translateY(-5px); box-shadow: 0 16px 34px rgba(86,53,69,.10); }
+}
+.program-icon { background: rgba(255,250,247,.42); color: var(--ultimate-mauve) !important; border-color: rgba(116,122,89,.45) !important; }
+
+/* Botaniske hjørner — diskrete, uten eksterne bildefiler */
+.program-section::after,
+.rsvp-footer-card::after {
+  content: "";
+  position: absolute;
+  right: clamp(20px, 4vw, 64px);
+  bottom: clamp(18px, 4vh, 54px);
+  width: clamp(120px, 13vw, 210px);
+  height: clamp(90px, 11vw, 170px);
+  z-index: 1;
+  pointer-events: none;
+  opacity: .44;
+  background:
+    radial-gradient(ellipse at 25% 73%, rgba(166,170,131,.92) 0 13%, transparent 14%),
+    radial-gradient(ellipse at 50% 52%, rgba(166,170,131,.78) 0 13%, transparent 14%),
+    radial-gradient(ellipse at 72% 30%, rgba(215,181,191,.88) 0 12%, transparent 13%),
+    linear-gradient(125deg, transparent 48%, rgba(116,122,89,.7) 49% 51%, transparent 52%);
+  transform: rotate(-10deg);
+}
+.program-section > *, .rsvp-footer-card > * { position: relative; z-index: 2; }
+
+/* Praktisk — faktiske outline-ikoner */
+.practical-icon {
+  width: 58px;
+  height: 58px;
   display: grid;
   place-items: center;
-  color: var(--mauve);
-  background: rgba(233,234,223,.62);
-  border: 1px solid rgba(116,121,91,.38);
+  margin: 0 auto 16px;
+  color: var(--ultimate-mauve);
+  background: rgba(255,250,247,.48);
+  border: 1px solid rgba(116,122,89,.42);
   border-radius: 50%;
 }
-
-.information-icon svg {
-  width: 27px;
-  height: 27px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.practical-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.information-card { background: rgba(255,250,247,.20); transition: transform .28s var(--ease), background .28s ease, box-shadow .28s ease !important; }
+@media (hover:hover) and (pointer:fine) {
+  .information-card:hover { transform: translateY(-5px); background: rgba(255,250,247,.68); box-shadow: 0 16px 34px rgba(65,54,50,.09); }
 }
 
-.information-card:hover .information-icon {
-  color: var(--ivory);
-  background: var(--mauve);
-  border-color: var(--mauve);
-  transform: translateY(-2px);
-}
+/* Gaver */
+.gifts-content .section-label, .gifts-content h2 { color: #fffaf7 !important; }
+.gifts-content p { color: rgba(255,250,247,.82) !important; }
+.gift-button { background: #fffaf7 !important; color: var(--ultimate-mauve-deep) !important; border-color: rgba(255,255,255,.76) !important; box-shadow: 0 14px 32px rgba(38,35,28,.15); }
 
-.information-icon {
-  transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease, transform 250ms var(--ease);
-}
-
-/* Gaveønsker: sage-side som bryter opp rytmen */
-.gifts-section {
-  color: #3f4034;
-  background:
-    radial-gradient(circle at 15% 18%, rgba(255,255,255,.24), transparent 30%),
-    linear-gradient(135deg, #aeb290, #979d78 58%, #858c68);
-}
-
-.gifts-section .section-label,
-.gifts-section .gifts-lead,
-.gifts-section p,
-.gifts-section h2 {
-  color: #fffdf9;
-}
-
-.gifts-section .gift-button {
-  color: var(--mauve-deep);
-  background: rgba(255,253,249,.92);
-  border-color: rgba(255,255,255,.72);
-  box-shadow: 0 10px 30px rgba(63,64,52,.16);
-}
-
-/* RSVP: full mørk avslutningsside */
+/* RSVP — tydelig luksuriøs sluttside */
+.rsvp-footer-card,
 .rsvp-section {
-  color: var(--ivory);
   background:
-    radial-gradient(circle at 18% 20%, rgba(227,200,209,.17), transparent 32%),
-    radial-gradient(circle at 82% 82%, rgba(166,170,131,.12), transparent 28%),
-    linear-gradient(145deg, #714556, #5d3545 58%, #492936);
+    radial-gradient(circle at 18% 16%, rgba(215,181,191,.17), transparent 31%),
+    radial-gradient(circle at 84% 82%, rgba(166,170,131,.16), transparent 32%),
+    linear-gradient(145deg, #684050 0%, #4f303f 100%) !important;
+  color: #fffaf7 !important;
 }
-
-.rsvp-section .rsvp-card {
-  width: min(760px, 88%);
-  color: var(--ivory);
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+.rsvp-card {
+  background: rgba(255,250,247,.07) !important;
+  color: #fffaf7 !important;
+  border-color: rgba(255,255,255,.34) !important;
+  box-shadow: 0 30px 72px rgba(33,20,27,.28), inset 0 0 0 8px rgba(255,255,255,.025), inset 0 0 0 9px rgba(255,255,255,.12) !important;
+  backdrop-filter: blur(2px);
 }
-
-.rsvp-section .section-label,
-.rsvp-section .rsvp-card h2,
-.rsvp-section .rsvp-card p {
-  color: var(--ivory);
+.rsvp-card h2, .rsvp-card .section-label, .rsvp-card p { color: #fffaf7 !important; }
+.rsvp-button {
+  color: var(--ultimate-mauve-deep) !important;
+  background: #f7e9ed !important;
+  border-color: #f7e9ed !important;
+  box-shadow: 0 13px 32px rgba(31,18,25,.22);
+  transition: transform .23s var(--ease), background .23s ease, box-shadow .23s ease !important;
 }
+.rsvp-button:hover, .rsvp-button:focus-visible { transform: translateY(-3px); background: #fffaf7 !important; box-shadow: 0 18px 40px rgba(31,18,25,.30); }
+.rsvp-footer-card > .site-footer { color: rgba(255,250,247,.84) !important; background: transparent !important; border-top-color: rgba(255,255,255,.18) !important; }
+.rsvp-footer-card > .site-footer .footer-names { color: #f1dce3 !important; }
+.rsvp-section .section-jump { color: #f1dce3 !important; }
 
-.rsvp-section .rsvp-button {
-  color: var(--mauve-deep);
-  background: #f1dfe5;
-  border: 1px solid rgba(255,255,255,.5);
-  box-shadow: 0 14px 34px rgba(37,19,27,.28);
-}
-
-.rsvp-section .rsvp-button:hover,
-.rsvp-section .rsvp-button:focus-visible {
-  color: #fff;
-  background: var(--sage-deep);
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(37,19,27,.34);
-}
-
-/* Botaniske akvarell-lignende hjørner uten ekstra bildefiler */
-.botanical-corner {
-  position: absolute;
-  z-index: 1;
-  width: clamp(190px, 20vw, 340px);
-  aspect-ratio: 1;
-  pointer-events: none;
-  opacity: .55;
-  filter: blur(.1px);
-  background:
-    radial-gradient(ellipse at 36% 28%, rgba(233,234,223,.92) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 58% 42%, rgba(166,170,131,.58) 0 8%, transparent 9%),
-    radial-gradient(circle at 68% 24%, rgba(240,225,229,.92) 0 9%, transparent 10%),
-    radial-gradient(circle at 45% 55%, rgba(205,174,186,.68) 0 8%, transparent 9%),
-    linear-gradient(42deg, transparent 45%, rgba(116,121,91,.38) 46% 48%, transparent 49%);
-}
-
-.botanical-corner-program {
-  top: 42px;
-  right: -58px;
-  transform: rotate(14deg);
-}
-
-.botanical-corner-rsvp {
-  left: -55px;
-  bottom: -68px;
-  transform: rotate(-16deg);
-  opacity: .42;
-}
-
-.program-section > *,
-.rsvp-section > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Mykere sideinnlasting */
-body.desktop-page-mode .desktop-page-active .compact-section-heading,
-body.desktop-page-mode .desktop-page-active .gifts-content,
-body.desktop-page-mode .desktop-page-active .rsvp-card {
-  animation: v5-section-enter 420ms var(--ease) both;
-}
-
-@keyframes v5-section-enter {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Litt større nedtelling */
-.countdown-item span {
-  font-size: clamp(1.8rem, 2.75vw, 3rem);
-}
-
-/* Mobil: behold uttrykket uten at dekor tar over */
-@media (max-width: 760px) {
-  .botanical-corner {
-    width: 165px;
-    opacity: .28;
-  }
-
-  .information-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-
-  .information-icon svg {
-    width: 21px;
-    height: 21px;
-  }
-
-  .rsvp-section .rsvp-card {
-    width: 100%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .timeline-event,
-  .timeline-event > img,
-  .program-card,
-  .information-icon,
-  .rsvp-button {
-    transition: none !important;
-  }
-
+/* Inngang ved aktiv side */
+@media (min-width: 761px) {
   body.desktop-page-mode .desktop-page-active .compact-section-heading,
   body.desktop-page-mode .desktop-page-active .gifts-content,
   body.desktop-page-mode .desktop-page-active .rsvp-card {
-    animation: none !important;
+    animation: ultimate-heading-in .48s var(--ease) both;
   }
+  body.desktop-page-mode .desktop-page-active .program-grid,
+  body.desktop-page-mode .desktop-page-active .information-grid,
+  body.desktop-page-mode .desktop-page-active .editorial-timeline {
+    animation: ultimate-content-in .55s var(--ease) .06s both;
+  }
+}
+@keyframes ultimate-heading-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ultimate-content-in { from { opacity: .2; transform: translateY(16px) scale(.992); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Mobil: behold zoom, gjør uttrykket tydelig uten overfylte detaljer */
+@media (max-width: 760px) {
+  .header-quick-navigation a { width: 34px !important; height: 34px !important; }
+  .header-quick-navigation svg { width: 17px !important; height: 17px !important; }
+  .harmonien-illustration { width: min(470px, 98%) !important; max-height: 27vh !important; margin: -4px auto 12px !important; filter: none !important; }
+  .program-section::after, .rsvp-footer-card::after { width: 105px; height: 82px; right: 12px; bottom: 18px; opacity: .25; }
+  .practical-icon { width: 40px; height: 40px; margin-bottom: 8px; }
+  .practical-icon svg { width: 21px; height: 21px; }
+  .timeline-copy time { margin-bottom: 4px !important; }
+  .rsvp-card { background: rgba(255,250,247,.08) !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-image, .timeline-event, .program-card, .information-card, .rsvp-button { transition: none !important; }
+  .desktop-page-active .compact-section-heading,
+  .desktop-page-active .gifts-content,
+  .desktop-page-active .rsvp-card,
+  .desktop-page-active .program-grid,
+  .desktop-page-active .information-grid,
+  .desktop-page-active .editorial-timeline { animation: none !important; }
 }

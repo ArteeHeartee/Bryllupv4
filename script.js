@@ -1979,7 +1979,7 @@ const handleDesktopWheel = (event) => {
         desktopWheelAccumulator = 0;
 
       },
-      90
+      70
     );
 
 
@@ -2036,7 +2036,7 @@ const handleDesktopWheel = (event) => {
       desktopWheelLocked = false;
 
     },
-    170
+    160
   );
 
 };
